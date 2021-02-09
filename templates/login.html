@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log and Reg</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id='wrap'>
+        {% if messages %}
+            <div id='errors'>
+                {% for message in messages %}
+                    <p>- {{message}} -</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <br><br>
+        <div class='form-box'>
+            <h3>Register</h3>
+            <form action="/register" method=POST>
+                {% csrf_token %}
+                First Name: <input type="text" name='first_name'>
+                Last Name: <input type="text" name='last_name'>
+                Email: <input type="text" name='email'>
+                Password: <input type="password" name='password'>
+                Confirm PW: <input type="password" name='pw_confirm'>
+                <input type="submit" value='Register'>
+            </form>
+        </div>
+        <div class='form-box'>
+            <h3>Login</h3>
+            <form action="/login" method=POST>
+                {% csrf_token %}
+                Email: <input type="text" name='email'>
+                Password: <input type="password" name='password'>
+                <input type="submit" value='Login'>
+            </form>
+        </div>
+        <a href="/logout" role="button" class="btn btn-sm btn-info ml-2 text-white">Logout</a>
+        <br><br>
+        <a href="/consult"role="button" class="btn btn-lg btn-info ml-4 text-white">Work With Me</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log and Reg</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id='wrap'>
+        {% if messages %}
+            <div id='errors'>
+                {% for message in messages %}
+                    <p>- {{message}} -</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class='form-box'>
+            <h3>Update Account Info</h3>
+            <form action="/account" method=POST>
+                {% csrf_token %}
+                First Name: <input type="text" name='first_name'>
+                Last Name: <input type="text" name='last_name'>
+                Email: <input type="text" name='email'>
+                Password: <input type="password" name='password'>
+                Confirm PW: <input type="password" name='pw_confirm'>
+                Bank Card Number: <input type="text" name='bank_card'>
+                Bank Card Expiration Date: <input type="text" name='bank_card_exp_date'>
+                Bank Card CSV: <input type="text" name='bank_card_csv'>
+                <input type="submit" value='Update'>
+            </form>
+        </div>
+        <div class='form-box2'>
+            <a href="/account" role="button" class="btn btn-sm btn-info ml-2 text-white">Back To Account</a>
+            <br><br>
+            <a href="/logout" role="button" class="btn btn-sm btn-info ml-2 text-white">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

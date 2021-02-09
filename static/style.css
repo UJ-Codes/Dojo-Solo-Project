@@ -1,0 +1,221 @@
+
+#wrap{
+    /* margin: 0px auto; */
+    /* background: url('https://images.app.goo.gl/6ndCBK2YJ4pD8Ane8') no-repeat center fixed; */
+    /* background-color: rgba(196, 100, 12, 0.301); */
+    max-width: 1000px;
+    /* height: auto; */
+    font-family: sans-serif;
+    padding: 15px;
+    overflow: auto;
+    padding-right: 1px; 
+    padding-left: 1px;
+    background-image: linear-gradient(
+        rgba(0.5, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)),url('calc_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain; 
+    /* background-position:-50% -50%; */
+    image-rendering: pixelated;
+    /* background-size: 100% 100%; */
+
+}
+
+#wrap_work{
+    /* margin: 0px auto; */
+    /* background: url('https://images.app.goo.gl/6ndCBK2YJ4pD8Ane8') no-repeat center fixed; */
+    /* background-color: rgba(196, 100, 12, 0.301); */
+    max-width: 1000px;
+    /* height: auto; */
+    font-family: sans-serif;
+    padding: 15px;
+    overflow: auto;
+    padding-right: 1px; 
+    padding-left: 1px;
+    background-image: linear-gradient(
+        rgba(0.5, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)),url('black_debt.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain; 
+    /* background-position:-50% -50%; */
+    image-rendering: pixelated;
+    /* background-size: 100% 100%; */
+
+}
+
+#nav{
+    background-color: #2b5e83;
+    background-image: url('black_debt.jpeg');
+    background-size: contain;
+    width: 950px;
+    min-height: 80px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px  black;
+    padding: 15px;
+    display: block;
+    border: 2px solid rgb(15, 11, 4);
+}
+
+.debtphoto3
+{
+    display: inline-block;
+}
+.about_header{
+    width: 950px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 48px;
+}
+
+#about, #aboutRight{
+
+    /* display: inline-block; */
+    padding: 20px;
+    display: inline-block;
+    text-indent: 1rem;
+    text-align: left;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+#about img{
+    /* display: inline-block; */
+    float: right;
+    border-radius: 3px;
+    border: 4px solid rgb(15, 11, 4);
+
+}
+
+.mapphoto{
+    /* width: 1000px;
+    height: 300px; */
+}
+
+
+#about a{
+    display:block;
+    width: 350px;
+    height: 110px;
+    padding: 35px;
+    font-size: 20px;
+    margin-top: 10px;
+    border: 4px solid rgb(15, 11, 4);
+}
+
+.work_header{
+    width: 950px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 48px;
+}
+
+.vertPass {
+    width: 300px;
+    height: 600px;
+    display: inline-block;
+    vertical-align: top;
+    /* background-color: whitesmoke; */
+
+    /* padding: 5px;
+    margin-right: 15px; */
+    /* margin: 10px; */
+    /* background-color: lightgray; */
+    vertical-align: top;
+    /* background: linear-gradient(to bottom right, #fefefe, #dbcbda); */
+    margin-right: 7px;
+    margin-left: 14px;
+    border:  2px  solid black;
+    float: right;
+    padding-right: 1px; 
+    padding-left: 1px;
+
+}
+
+.passHeader{
+    background: linear-gradient(#9c5235, #295754, #bb6e0a);
+    color: white;
+    padding: 15px 10px;
+    margin: 1px;
+    text-align: center;
+    height: 50px;
+    font-size: 28px;  
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: cursive;
+}
+
+li {
+    font-size: 20px;
+    text-align: left;
+}
+
+.colText{
+    font-size: 20px;
+}
+.enroll{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-box{
+    display: inline-block;
+    /* background-color: rgb(117, 118, 119);
+     */
+    width: 400px;
+    min-height: 500px;
+    padding: 25px;
+    vertical-align: top;
+    margin: 10px;
+}
+
+.form-box form{
+    margin: 25px;
+}
+
+.form-box input{
+    display: block;
+    margin: 15px;
+}
+
+#errors {
+    text-align: center;
+    font-size: 24pt;
+    color: red;
+    /* background-color: rgb(209, 200, 200); */
+    padding: 20px;
+    height: 100px;
+    }
+
+.vertCol {
+    width: 408px;
+    height: 670px;
+    display: inline-block;
+    vertical-align: top;
+        /* background-color: whitesmoke; */
+    text-align: center;
+        /* padding: 5px;
+        margin-right: 15px; */
+        /* margin: 10px; */
+        /* background-color: lightgray; */
+    vertical-align: top;
+        /* background: linear-gradient(to bottom right, #fefefe, #dbcbda); */
+    margin-right: 19px;
+}
+
+.vertCol img{
+    border-radius: 3px;
+    border: 2px solid rgb(15, 11, 4);  
+}
+
+
+.loc_header{
+    display: inline-block;
+}
+
+.debtphoto2{
+    height: 440px;
+    width: 540px;
+}

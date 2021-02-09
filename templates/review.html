@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log and Reg</title>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id='wrap'>
+        <div id = "nav">
+            <a href="/about"role="button" class="btn btn-lg btn-info ml-4 text-white">Home</a>
+            <!-- <h3 class="navtext">Home</h3> -->
+            <a href="/consult"role="button" class="btn btn-lg btn-info ml-4 text-white">Work With Me</a>
+            <!-- <h3 class="navtext">Work With Me</h3> -->
+            <!-- <h3 class="navtext">Testimonials</h3> -->
+            <a href="/review"role="button" class="btn btn-lg btn-info ml-4 text-white">Testimonials</a>
+            <!-- <h3 class="navtext">About</h3> -->
+            <a href="/location"role="button" class="btn btn-lg btn-info ml-4 text-white">Location</a>
+            <!-- <h3 class="navtext">Account</h3> -->
+            <a href="/login_page"role="button" class="btn btn-lg btn-info ml-4 text-white"> My Account</a>
+        </div>
+        <h1>Hello, Leave A Review !</h1> 
+        {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li>{{ message }}</li>    
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <div class='form-box'>
+            <form action="/create_wish" method="post">
+            <!-- <form action="/create_wish/{{wish.id}}" method="post"> -->
+                {% csrf_token %}
+                <label for="item">Review</label>
+                <input type="text" name='item'>
+                <label for="description">Description</label>
+                <input type="text" name='description'>
+                <input type="submit" value="Submit">
+                {% for wish in user.wishes.all %}
+                {% if wish.granted == False %}
+                    <p>{{ item.user_likes.count }}</p>
+                {% endif %}
+                {% endfor %} 
+
+
+                {% for wish in user.wishes.all %}
+                {% if wish.granted == True %}
+                    <p>{{ item.user_likes.count }}</p>
+                {% endif %}
+                {% endfor %} 
+                <!-- <div class="form-group-show">
+                    <label for="item">I wish for:</label>
+                    <input type="text" name="item" id="item" class="form-control-show" value="{{ wish.item }}">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10" class="form-control-show">{{ wish.description}}</textarea>
+                </div>         -->
+                    <!-- <input type="text" name="user_name" class="form-control" 
+                        {% if request.session.user_name %} value="{{ request.session.user_name }}"{% endif %}> -->
+                <!-- <input type="submit" value="Submit"> -->
+            </form>
+        </div>
+    </div>
+</body>
+</html>

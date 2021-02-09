@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log and Reg</title>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <!-- background-image: url(debt_wrapper.jpg) -->
+    <div style="background-image: url('black_debt.jpeg');"></div>
+    <div id='wrap'>
+        <div id = "nav">
+            <a href="/about"role="button" class="btn btn-lg btn-info ml-4 text-white">Home</a>
+            <!-- <h3 class="navtext">Home</h3> -->
+            <a href="/consult"role="button" class="btn btn-lg btn-info ml-4 text-white">Work With Me</a>
+            <!-- <h3 class="navtext">Work With Me</h3> -->
+            <!-- <h3 class="navtext">Testimonials</h3> -->
+            <a href="/review"role="button" class="btn btn-lg btn-info ml-4 text-white">Testimonials</a>
+            <!-- <h3 class="navtext">About</h3> -->
+            <a href="/location"role="button" class="btn btn-lg btn-info ml-4 text-white">Location</a>
+            <!-- <h3 class="navtext">Account</h3> -->
+            <a href="/login_page"role="button" class="btn btn-lg btn-info ml-4 text-white"> My Account</a>
+        </div>
+        <br><br>
+        <div class ="about_header">
+            <h1><b>About</b></h1>
+        </div>
+        <div id="about">        
+            
+            <p>I love Traveling, Budgeting, and Hair. I believe that life is this crazy endeavor that we find ourselves living. And if I could just make an impact on one persons life that will be enough for me. Being able to look good and feel good helps us all walk a little taller. I hope to help people be "Financially Free!". I hope you enjoy my blog!<br><br>
+
+            First appearing in 1991, Python is a general-purpose, high-level, interpreted programming language whose design forces emphasizes code readability. Whether for processing/analyzing data to powering many well-known applications, Python is not only a great language for new programmers but also powerful enough for seasoned building whatever they can think of. <br><br>
+
+            Financial Literacy is important when it comes to being successful with money. A person can make over $40,000 or over $80,000 but if they have poor money management, then they will end up living life pretty similarly. If you would like to read more about my personal journey, then please click here. Fuller Than Life focuses on Financial Coaching through helping my clients come up with real and comprehensive budget plans, reduce debt, and create saving plans through effective planning and transparency. My model works because I not only walk you through the beginning of the process but I hold you accountable for the goals that you have set out to accomplish
+            </p>
+
+            <img class="mainphoto" src="{% static 'photo_of_me.jpg' %}" alt="photo of Unique J.">
+        <!-- </div>
+        <di id="aboutRight"></di> -->
+                <!-- <div class="aboutRight"> -->
+            <a href="/consult" role="button" class="btn btn-sm btn-info ml-2 text-white"><b>I Am Ready For A Consultation</b></a>
+            <!-- <a href="/consult" role="button" class="btn btn-sm btn-info ml-2 text-white">I Am Ready For A Consultation</a> -->
+        </div>    
+            <!-- </div>
+        </div> -->
+    </div>
+</body>
+</html>
